@@ -2,19 +2,39 @@
 import requests
 import bs4
 
+# Config Variables
+base_url = 'http://localhost:8000/'
+start_url = 'page1.html'
 
-url = 'http://localhost:8000/page1.html'
-r = requests.get(url)
+# Fetch all links on a page
+def get_page_links(url):
+    r = requests.get(base_url + start_url)
+    soup = bs4.BeautifulSoup(r.text, 'html.parser')
+    #print soup.prettify()
+    
+    links  = soup.find_all('a')
+    print links
+    return null
 
-#Encode to utf-8 on writing to disk or printing
-#print r.text.encode('utf-8')
-#print r.text
+# Fetch data on page
+def get_page_data():
+    return null
 
-soup = bs4.BeautifulSoup(r.text, 'html.parser')
-#print soup.prettify()
+# Check if the url is relative or absolute
+def is_relative_url(s):
+    return null
 
-links  = soup.find_all('a')
-print links
+
+    
+
+
+
+
+
+
+
+
+
 
 
 
