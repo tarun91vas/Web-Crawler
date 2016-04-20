@@ -27,7 +27,7 @@ import bs4
 from urlparse import urljoin
 import pprint
 
-class Crawl(object):
+class Crawler(object):
         def __init__(self, url, depth):
             self.depth = depth
             self.links = [url]
@@ -88,7 +88,7 @@ class Crawl(object):
 
 def main():
         start_url = 'http://localhost:8000/page1.html'
-        crawler =  Crawl(start_url, 3)
+        crawler =  Crawler(start_url, 3)
         data = crawler.crawl()
         pprint.pprint(data)
 
