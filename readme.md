@@ -1,18 +1,18 @@
 ## Web Crawler
-Crawler class scrapes the data from the start url until given depth of traversal. It return a dictionary of crawled url as key and its html content as value. This class can be used as starter for creating search applications or any other analytics project.
+Crawler class scrapes the data from the start url until given depth of traversal. It returns a dictionary of crawled url as key and its html content as value. This class can be used as a starter for creating search applications or any other analytics project.
 
 ###### Working:
 Given a base url, it will crawl/scrape all the pages linked to it for a given depth of crawling.The useful information from the scraped data can be extracted by specifying appropriate regular expressions.
 
 #### Project setup
-A sample web has been provided for proof of concept and testing. Sample web consists of combination of relative and absolute urls along with loops in the web. Crawler class has been tested on above such common scenarios of the web. Files can be served using simple python HTTP Server
+A sample web has been provided for the proof of concept and testing. Sample web consists of combination of relative and absolute urls along with loops in the web. Crawler class has been tested on above such commonly encountered scenarios of the web. Files can be served using simple python HTTP Server
 
 ```sh
 $ cd sample_web
 $ python -m SimpleHTTPServer 8000
 ```
 
-Browse sample on 
+Browse sample web on 
 `http://localhost:8000/page1.html`
 
 > **Warning:**
@@ -64,7 +64,7 @@ The code on class usage has been provided in the file `example.py` .
  ```sh
     {
         'link1': 'html content for link 1',
-        'link2': 'html content for link 2'.
+        'link2': 'html content for link 2',
         .
         .
         .
