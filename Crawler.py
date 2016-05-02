@@ -81,8 +81,10 @@ class Crawler(object):
                     
                     # update list of links and link_depth
                     for child in child_links:
-                        self.links.append(child)
-                        self.link_depth_map[child] = self.link_depth_map[link] + 1
+                        # Push the new link if not present already
+                        if child not in self.links:
+                                self.links.append(child)
+                                self.link_depth_map[child] = self.link_depth_map[link] + 1
                         
             return result
 

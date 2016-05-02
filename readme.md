@@ -21,13 +21,13 @@ Browse sample web on
 ###### Test run
 
 ```sh
-    python example.py
+$ python example.py
 ```
     
 `or`
 
 ```sh
-    python Crawler.py
+$ python Crawler.py
 ```
 
 #### Usage
